@@ -29,31 +29,12 @@ window.onload = function() {
           alert("please add our chatbot first")
           windows.location = "https://line.me/R/ti/p/@694uehom"
         } else {
-          getUserProfile()
+           checks();
         }
   });
 }
   
-  
    
-      async function main(){
-        await liff.init({liffId: "1660745228-EG3ww5N1"})
-        const isFriend = await getFriend()
-        if(!isFriend){
-          alert("please add our chatbot first")
-          windows.location = "https://line.me/R/ti/p/@694uehom"
-        } else {
-          getUserProfile()
-        }
-      }
-
-      async function getFriend() {
-        const friend = await liff.getFriendship()
-        return friend.friendFlag
-      }
-
-
- 
 
 const xurl = "https://script.google.com/macros/s/AKfycby8NOcSbpISRqCL07k5SgOmNWxR0IWOWrOV4Zda_Y9o7Qlxui7Ueqp1UIZ_-G9KD4ueVQ/exec";
 
