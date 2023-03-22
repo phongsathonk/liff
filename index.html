@@ -24,15 +24,13 @@
 window.onload = function() {
   liff.init({ liffId: '1660745228-EG3ww5N1' })
   .then(async () => {
-    if (liff.isLoggedIn()) {
-      console.log(liff.getProfile());
-    } else {
-      liff.login();
-    }
-  })
-  .catch((err) => {
-    console.log(err);
-  })
+    const isFriend = await getFriend()
+        if(!isFriend){
+          alert("please add our chatbot first")
+          windows.location = "https://line.me/R/ti/p/@694uehom"
+        } else {
+          getUserProfile()
+        }
 }
   
   
