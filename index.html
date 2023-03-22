@@ -22,7 +22,17 @@
 
 <script>
 window.onload = function() {
-  main()
+  liff.init({ liffId: '1660745228-EG3ww5N1' })
+  .then(async () => {
+    if (liff.isLoggedIn()) {
+      console.log(liff.getProfile());
+    } else {
+      liff.login();
+    }
+  })
+  .catch((err) => {
+    console.log(err);
+  })
 }
   
   
