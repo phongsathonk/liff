@@ -34,6 +34,11 @@ window.onload = function() {
   });
 }
   
+  async function getFriend() {
+        const friend = await liff.getFriendship()
+        return friend.friendFlag
+      }
+  
    
 
 const xurl = "https://script.google.com/macros/s/AKfycby8NOcSbpISRqCL07k5SgOmNWxR0IWOWrOV4Zda_Y9o7Qlxui7Ueqp1UIZ_-G9KD4ueVQ/exec";
